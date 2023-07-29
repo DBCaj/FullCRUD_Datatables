@@ -1,0 +1,16 @@
+@charset "UTF-8";
+
+
+.text-georgia {
+  font-family: georgia;
+  margin: 10px 0 10px 0;
+}
+
+.style-edit-icon {
+  float: left;
+  margin-right: 15px;
+}
+
+.style-delete-icon {
+  float: left;
+}
