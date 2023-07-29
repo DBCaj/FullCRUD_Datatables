@@ -7,8 +7,6 @@ resources/views/components/*
 
 resources/views/layouts/*
 
-resources/views/layouts/main.blade.php
-
 database/seeders/DatabaseSeeder.php
 
 database/migrations/*
