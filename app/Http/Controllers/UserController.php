@@ -101,16 +101,14 @@ class UserController extends Controller
       ->withInput();
     }
     
-    DB::table('users')
-    ->where('id', $req->userId)
-    ->update([
-      'name' => $req->firstname . " " . $req->middlename . " " . $req->lastname,
+    User::updateOrCreate([
+      'name' => $req->name . " " . $req->middlename . " " . $req->lastname,
       'firstname' => $req->firstname,
       'middlename' => $req->middlename,
       'lastname' => $req->lastname,
-      'email' => $req->email,
-      'password' => Hash::make($req->password),
-      'role' => $req->role,
+      'email' => $req->input('email'),
+      'password' => Hash::make($req->input('password')),
+      'role' => $req->input('role'),
       ]);
     
     $req->session()->flash('success', 'User updated successfully');
